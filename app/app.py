@@ -1,7 +1,7 @@
 from flask import Flask, render_template, abort
 import markdown
 import os
-import frontmatter
+import python_frontmatter as frontmatter
 from datetime import datetime
 
 app = Flask(__name__)

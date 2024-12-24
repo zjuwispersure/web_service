@@ -120,4 +120,70 @@ footer {
 
 .icp-link:hover {
     text-decoration: underline;
+}
+
+.coming-soon-container {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.coming-soon-content {
+    background: white;
+    border-radius: 12px;
+    padding: 3rem;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.coming-soon-message {
+    margin: 3rem 0;
+}
+
+.coming-soon-message img {
+    max-width: 200px;
+    margin-bottom: 2rem;
+}
+
+.coming-soon-message p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.feature-preview {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.preview-content {
+    text-align: left;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.preview-content h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.preview-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.preview-content li {
+    padding: 0.5rem 0;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.preview-content li:before {
+    content: "•";
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-right: 0.5rem;
 } 
