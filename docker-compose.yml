@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  icp-web:
+    build: .
+    container_name: icp-web
+    restart: always
+    networks:
+      - icp-network
+
+  nginx:
+    image: nginx:latest
+    container_name: icp-nginx
+    ports:
+      - "8081:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - icp-web
+    networks:
+      - icp-network
+
+networks:
+  icp-network:
+    name: icp-network
