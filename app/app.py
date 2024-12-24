@@ -54,11 +54,11 @@ def article(slug):
 
 @app.route('/emotion')
 def emotion():
-    return render_template('coming_soon.html', title='宠物表情识别')
+    return render_template('emotion.html')
 
 @app.route('/map')
 def map():
-    return render_template('coming_soon.html', title='宠物地图')
+    return render_template('map.html')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
