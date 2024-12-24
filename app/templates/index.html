@@ -3,38 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PetGenie</title>
+    <title>PetGenie - 您的宠物生活指南</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 0;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+            line-height: 1.6;
         }
+        
+        header {
+            background-color: #4a90e2;
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav {
+            background-color: #357abd;
+            padding: 0.5rem 0;
+        }
+
+        nav ul {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #2868a5;
+        }
+
         .content {
             flex: 1;
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
         }
+
+        .article {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .article h2 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+
+        .article-meta {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
         footer {
+            background-color: #f8f9fa;
             text-align: center;
             padding: 20px;
-            font-size: 14px;
+            margin-top: auto;
         }
+
         .icp-link {
             color: #666;
             text-decoration: none;
         }
+
         .icp-link:hover {
             text-decoration: underline;
+        }
+
+        .coming-soon {
+            text-align: center;
+            padding: 3rem;
+            color: #666;
+            background: #f8f9fa;
+            border-radius: 8px;
         }
     </style>
 </head>
 <body>
+    <header>
+        <div class="header-content">
+            <h1>PetGenie</h1>
+            <p>您的宠物生活指南</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#knowledge">宠物喂养知识</a></li>
+            <li><a href="#emotion">宠物表情识别</a></li>
+            <li><a href="#map">宠物地图</a></li>
+        </ul>
+    </nav>
+
     <div class="content">
-        <h1>Welcome to PetGenie</h1>
-        <p>网站建设中...</p>
+        <section id="knowledge">
+            <div class="article">
+                <h2>猫咪科学喂养指南</h2>
+                <div class="article-meta">发布时间：2024-01-30</div>
+                <p>正确的喂养方式对猫咪的健康至关重要。以下是一些基本的喂养建议：</p>
+                <h3>1. 喂食次数和时间</h3>
+                <p>成年猫建议每天喂食2-3次，幼猫需要更频繁的喂食。固定的喂食时间有助于建立良好的饮食习惯。</p>
+                <h3>2. 食物选择</h3>
+                <p>选择优质猫粮作为主食，可以适当搭配湿粮。确保食物中含有足够的蛋白质和必需营养。</p>
+                <h3>3. 饮水习惯</h3>
+                <p>保持清洁的饮用水，建议使用活水机增加猫咪饮水兴趣。</p>
+            </div>
+
+            <div class="article">
+                <h2>狗狗饮食注意事项</h2>
+                <div class="article-meta">发布时间：2024-01-30</div>
+                <p>合理的饮食计划是狗狗健康的基础，需要注意以下几点：</p>
+                <h3>1. 根据年龄调整饮食</h3>
+                <p>不同年龄段的狗狗需要不同的营养配比，幼犬、成犬和老年犬的饮食需求各不相同。</p>
+                <h3>2. 避免人类食物</h3>
+                <p>某些人类食物对狗狗有害，如巧克力、葡萄、洋葱等，需要特别注意避免。</p>
+                <h3>3. 定量投喂</h3>
+                <p>根据狗狗的体型和活动量来确定每天的食物量，避免过度喂养导致肥胖。</p>
+            </div>
+        </section>
+
+        <section id="emotion" class="coming-soon">
+            <h2>宠物表情识别</h2>
+            <p>功能开发中，敬请期待...</p>
+        </section>
+
+        <section id="map" class="coming-soon">
+            <h2>宠物地图</h2>
+            <p>功能开发中，敬请期待...</p>
+        </section>
     </div>
+
     <footer>
         <a href="https://beian.miit.gov.cn/" target="_blank" class="icp-link">沪ICP备2024105384号</a>
     </footer>

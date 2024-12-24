@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}PetGenie - 您的宠物生活指南{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <a href="/">PetGenie</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('knowledge') }}">宠物知识库</a></li>
+                    <li><a href="{{ url_for('emotion') }}">表情识别</a></li>
+                    <li><a href="{{ url_for('map') }}">宠物地图</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://beian.miit.gov.cn/" target="_blank" class="icp-link">沪ICP备2024105384号</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html> 
