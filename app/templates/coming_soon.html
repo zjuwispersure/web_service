@@ -1,1 +1,36 @@
- 
+{% extends "base.html" %}
+
+{% block title %}{{ title }} - PetGenie{% endblock %}
+
+{% block content %}
+<div class="coming-soon-container">
+    <div class="coming-soon-content">
+        <h1>{{ title }}</h1>
+        <div class="coming-soon-message">
+            <img src="{{ url_for('static', filename='images/coming-soon.svg') }}" alt="Coming Soon">
+            <p>功能开发中，敬请期待...</p>
+        </div>
+        <div class="feature-preview">
+            {% if title == '宠物表情识别' %}
+            <div class="preview-content">
+                <h2>即将推出的功能</h2>
+                <ul>
+                    <li>实时表情识别</li>
+                    <li>情绪分析报告</li>
+                    <li>行为建议指导</li>
+                </ul>
+            </div>
+            {% elif title == '宠物地图' %}
+            <div class="preview-content">
+                <h2>即将推出的功能</h2>
+                <ul>
+                    <li>附近宠物医院</li>
+                    <li>宠物友好场所</li>
+                    <li>宠物服务评价</li>
+                </ul>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %} 
